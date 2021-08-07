@@ -10,13 +10,13 @@ import (
 )
 
 func main() {
-	unixsock := flag.String("sock", "", "path to unix socket")
+	unixsock := flag.String("unixsock", "", "path to unix socket")
 
 	flag.Parse()
 
 	if len(*unixsock) == 0 {
 		fmt.Println("missing required params")
-		fmt.Printf("usage: %s -sock /path/to/socket\n", os.Args[0])
+		fmt.Printf("usage: %s -unixsock /path/to/socket\n", os.Args[0])
 		os.Exit(0)
 	}
 
